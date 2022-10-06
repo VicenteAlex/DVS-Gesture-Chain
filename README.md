@@ -2,8 +2,9 @@
 Official implementation of the dataset defined in [Evaluating the temporal understanding of neural networks on event-based action recognition with DVS-Gesture-Chain](https://arxiv.org/abs/2209.14915)
 ### Installation
 From PyPI:
-
-*coming soon*
+```
+pip install dvsgc
+```
 
 From GitHub source code:
 ```
