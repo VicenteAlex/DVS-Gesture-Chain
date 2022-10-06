@@ -69,7 +69,7 @@ def create_combined_directory_structure(source_dir: str, target_dir: str, class_
 
     Create the same directory structure in ``target_dir`` with that of ``source_dir``.
     """
-    for sub_dir_name in os.listdir(source_dir): #test/train
+    for sub_dir_name in os.listdir(source_dir):
         source_sub_dir = os.path.join(source_dir, sub_dir_name)
         if os.path.isdir(source_sub_dir):
             target_sub_dir = os.path.join(target_dir, sub_dir_name)
@@ -236,7 +236,7 @@ class DVSGestureChain(DatasetFolder):
                             utils.download_url(url=url, root=download_root, filename=file_name, md5=md5)
                         else:
                             raise NotImplementedError(
-                                f'This dataset can not be downloaded by SpikingJelly, please download [{file_name}] from [{url}] manually and put files at {download_root}.')
+                                f'This dataset can not be downloaded automatically, please download [{file_name}] from [{url}] manually and put files at {download_root}.')
 
             else:
                 os.mkdir(download_root)
@@ -249,7 +249,7 @@ class DVSGestureChain(DatasetFolder):
                         print(f'Download [{file_name}] from [{url}] to [{download_root}]')
                         utils.download_url(url=url, root=download_root, filename=file_name, md5=md5)
                 else:
-                    raise NotImplementedError(f'This dataset can not be downloaded by SpikingJelly, '
+                    raise NotImplementedError(f'This dataset can not be downloaded automatically, '
                                               f'please download files manually and put files at [{download_root}]. '
                                               f'The resources file_name, url, and md5 are: \n{resource_list}')
 
@@ -257,9 +257,9 @@ class DVSGestureChain(DatasetFolder):
             extract_root = os.path.join(root, 'extract')
             if os.path.exists(extract_root):
                 print(f'The directory [{extract_root}] for saving extracted files already exists.\n'
-                      f'SpikingJelly will not check the data integrity of extracted files.\n'
-                      f'If extracted files are not integrated, please delete [{extract_root}] manually, '
-                      f'then SpikingJelly will re-extract files from [{download_root}].')
+                      f'The data integrity of the extracted files will not be checked.\n'
+                      f'If the extracted files are not integrated, please delete [{extract_root}] manually, '
+                      f'then the files will be re-extracted from [{download_root}].')
                 # shutil.rmtree(extract_root)
                 # print(f'Delete [{extract_root}].')
             else:
