@@ -1,5 +1,5 @@
 # DVS Gesture Chain
-Implementation of the dataset defined in [Evaluating the temporal understanding of neural networks on event-based action recognition with DVS-Gesture-Chain](https://arxiv.org/abs/2209.14915)
+Implementation of the dataset defined in [Spiking Neural Networks for event-based action recognition: A new task to understand their advantage](https://arxiv.org/abs/2209.14915)
 ### Installation
 From PyPI:
 ```
